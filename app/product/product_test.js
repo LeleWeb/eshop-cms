@@ -4,7 +4,7 @@ describe('eshopCms.productsList module', function() {
 
   beforeEach(module('eshopCms.productsList'));
 
-  describe('products controller', function(){
+  describe('product controller', function(){
 
     it('should ....', inject(function($controller) {
       //spec body

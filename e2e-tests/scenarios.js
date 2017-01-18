@@ -5,20 +5,20 @@
 describe('my app', function() {
 
 
-  it('should automatically redirect to /products when location hash/fragment is empty', function() {
+  it('should automatically redirect to /product when location hash/fragment is empty', function() {
     browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/products");
+    expect(browser.getLocationAbsUrl()).toMatch("/product");
   });
 
 
   describe('products', function() {
 
     beforeEach(function() {
-      browser.get('index.html#!/products');
+      browser.get('index.html#!/product');
     });
 
 
-    it('should render products when user navigates to /products', function() {
+    it('should render product when user navigates to /product', function() {
       expect(element.all(by.css('[ng-view] p')).first().getText()).
         toMatch(/partial for view 1/);
     });
