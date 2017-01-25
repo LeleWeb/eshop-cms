@@ -20,8 +20,16 @@ angular.module('eshopCms', [
     templateUrl: '/product/product-list.html'
   }
 
+  var ProductsCreateState = {
+    name: 'productsCreate',
+    url: '/products/create',
+    controller: 'createProductController',
+    templateUrl: '/product/product-create.html'
+  }
+
   $stateProvider.state(indexState);
   $stateProvider.state(productsListState);
+  $stateProvider.state(ProductsCreateState);
 })
 .controller('statisticsController', [function($scope) {
   console.log('statisticsController');
