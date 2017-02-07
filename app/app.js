@@ -23,7 +23,7 @@ angular.module('eshopCms', [
   var ProductsCreateState = {
     name: 'productsCreate',
     url: '/products/create',
-    controller: 'createProductController',
+    controller: 'productsCreateController',
     templateUrl: '/product/product-create.html'
   }
 
@@ -39,6 +39,9 @@ angular.module('eshopCms', [
 }])
 .controller('productsListController', [function($scope) {
   console.log('productsListController');
+}])
+.controller('productsCreateController', [function($scope) {
+  console.log('productsCreateController');
 }]);
 //.
 //config(function($stateProvider) {

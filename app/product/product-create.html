@@ -1,0 +1,76 @@
+<div ng-controller="productsCreateController">
+    <form class="am-form am-form-horizontal">
+        <fieldset>
+            <legend>新建商品</legend>
+
+            <div class="am-form-group">
+                <label for="product-name" class="col-sm-2 am-form-label">商品名称</label>
+                <div class="col-sm-3">
+                    <input type="email" class="am-input-sm" id="product-name">
+                </div>
+            </div>
+
+            <div class="am-form-group">
+                <label for="product-description">商品描述</label>
+                <textarea class="am-input-sm" rows="5" id="product-description"></textarea>
+            </div>
+
+            <div class="am-form-group">
+                <label for="product-detail">商品详情</label>
+                <textarea class="am-input-sm" rows="5" id="product-detail"></textarea>
+            </div>
+
+            <div class="am-form-group">
+                <label for="product-name" class="col-sm-2 am-form-label">库存</label>
+                <div class="col-sm-10">
+                    <input type="email" class="am-input-sm" id="product-stock">
+                </div>
+            </div>
+
+            <div class="am-form-group">
+                <label for="product-name" class="col-sm-2 am-form-label">价格</label>
+                <div class="col-sm-10">
+                    <input type="email" class="am-input-sm" id="product-price">
+                </div>
+            </div>
+
+            <div class="am-form-group">
+                <label for="product-name" class="col-sm-2 am-form-label">优惠价格</label>
+                <div class="col-sm-10">
+                    <input type="email" class="am-input-sm" id="product-real_price">
+                </div>
+            </div>
+
+            <div class="am-form-group">
+                <label for="doc-select-1">商品分类</label>
+                <select id="doc-select-1">
+                    <option value="option1">首页</option>
+                    <option value="option2">选项二.....</option>
+                    <option value="option3">选项三........</option>
+                </select>
+                <span class="am-form-caret"></span>
+            </div>
+
+            <div class="am-form-group">
+                <label for="doc-ipt-file-1">商品全尺寸图</label>
+                <input type="file" id="doc-ipt-file-1">
+                <p class="am-form-help">请选择要上传的图片...</p>
+            </div>
+
+            <div class="am-form-group">
+                <label for="doc-ipt-file-1">商品轮播图</label>
+                <input type="file" id="doc-ipt-file-1">
+                <p class="am-form-help">请选择要上传的图片...</p>
+            </div>
+
+            <div class="am-form-group">
+                <label for="doc-ipt-file-1">商品详情图</label>
+                <input type="file" id="doc-ipt-file-1">
+                <p class="am-form-help">请选择要上传的图片...</p>
+            </div>
+
+            <p><button type="submit" class="am-btn am-btn-default">提交</button></p>
+        </fieldset>
+    </form>
+</div>
+
