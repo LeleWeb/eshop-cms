@@ -1,0 +1,47 @@
+<header class="am-topbar am-topbar-inverse admin-header" ng-include="'framework/template/header.html'">
+</header>
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+	<div class="admin-sidebar am-offcanvas" id="admin-offcanvas" ng-include="'framework/template/sidebar.html'"></div>
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content">
+	<form class="am-form">
+	  <fieldset>
+		<legend>{{title}}</legend>
+		
+		<label >开始时间:</label>
+		<input type="text"    class="form-datetime" ng-model="panic_buying.begin_time">		
+		<label >结束时间:</label>
+		<input type="text"  class=" form-datetime"  ng-model="panic_buying.end_time">	
+		
+
+		<br>
+		
+		<label >产品:</label>
+		
+		<select ng-model="panic_buying.product_ids" multiple ng-options="x.id as x.name for x in productList"></select>
+	
+		 </div>
+		
+	
+		
+		<p><button id="saveproduct" class="am-btn am-btn-primary " ng-click = "savepanic_buying()">保存</button></p>
+		
+	  </fieldset>
+	</form>
+	
+	 
+  </div>
+ <!-- content end -->
+
+</div>
+
+<a  class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+
+<footer  ng-include="'framework/template/footer.html'">
+</footer>
+
+

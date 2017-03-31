@@ -1,0 +1,65 @@
+<header class="am-topbar am-topbar-inverse admin-header" ng-include="'framework/template/header.html'">
+</header>
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+	<div class="admin-sidebar am-offcanvas" id="admin-offcanvas" ng-include="'framework/template/sidebar.html'"></div>
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content" >
+        <ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
+        <li><a ui-sref="timeLimit" class="am-text-success"><span class="am-icon-btn am-icon-plus"></span><br/>新增限时<br/>2300</a></li>
+		</ul>
+	<form class="am-form">
+	  <fieldset>
+		<legend>限时列表</legend>
+		<div class="am-g">
+        <div class="am-u-sm-12">
+          <table class="am-table am-table-bd am-table-striped admin-content-table">
+            <thead>
+            <tr>
+              <th>ID</th><th>开始时间</th><th>结束时间</th><th>产品</th><th>编辑</th><th>删除</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat = "panic_buying in panic_buyings track by $index">
+			 <td>{{panic_buying.id}}</td>
+	
+			 <td>{{panic_buying.begin_time|DateFormat}}</td>
+			 <td><a >{{panic_buying.end_time|DateFormat}}</a></td> 
+			 <td>
+			 <ul>
+				 <li>
+					<span  ng-repeat = "p in panic_buying.products track by $index" class="am-badge am-badge-success">{{p.name}} ;</span>
+				 </li>
+			 </ul>
+			 </td>
+             <td>
+			  <a ui-sref="timeLimit({ timeLimitId: {{panic_buying.id}} })" class="am-text-success">编辑</a>
+             </td>
+			 <td>
+				<a class="am-icon-close" ng-click = "delpanic_buying(panic_buying.id)">
+				删除
+				</a>
+             </td>
+            </tr>		
+            </tbody>
+          </table>
+        </div>
+      </div>
+	</fieldset>
+	</form>
+	
+	 
+  </div>
+ <!-- content end -->
+
+</div>
+
+<a  class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+
+<footer  ng-include="'framework/template/footer.html'">
+</footer>
+
+
