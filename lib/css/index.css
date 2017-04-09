@@ -138,6 +138,9 @@ ul {
 .admin-content-table a {
   color: #535353;
 }
+
+.red-text{ color: #FF0000; }
+
 .admin-content-file {
   margin-bottom: 0;
   color: #666;
