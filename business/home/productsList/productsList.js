@@ -2,7 +2,7 @@ define(["amaze","framework/services/productService"],function (amaze,productServ
 	var ctrl = ["$scope","$state","$stateParams","$http","$q",function($scope,$state, $stateParams,$http,$q){
 		var ps = new productService($q);
 		$scope.getProductList=function(){
-			
+
 			ps.getProductList($scope.query).then(function(data){
 				$scope.tipMessageOnLeft="查询产品列表";
 				if(data.code===0){
